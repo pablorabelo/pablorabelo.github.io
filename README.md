@@ -1,8 +1,9 @@
 
-# Sistema Halley de Esducação Atuarial
+# Sistema Halley de Educação Atuarial
+# Halley System of Actuarial Education
 
-Hitórico dos Seguros: 
+## Hitórico dos Seguros: 
 https://pablorabelo.github.io/historia_seguro
 
-Histórico da Previdência:
+## Histórico da Previdência:
 https://pablorabelo.github.io/historico_previdencia_social
