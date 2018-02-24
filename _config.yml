@@ -1,1 +1,8 @@
-theme: jekyll-theme-tactile
+theme:  lumen
+    highlight: tango
+    
+navbar:
+  right:
+    
+    - icon: fa-github-alt fa-lg
+href: https://github.com/pablohrabelo
