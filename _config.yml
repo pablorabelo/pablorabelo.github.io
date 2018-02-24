@@ -1,6 +1,1 @@
 theme:  jekyll-theme-midnight
-navbar:
-+  right:
-+    
-+    - icon: fa-github-alt fa-lg
-+href: https://github.com/pablohrabelo
