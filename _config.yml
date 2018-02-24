@@ -1,4 +1,4 @@
-theme:  lumen
+theme:  jekyll-theme-midnight
 navbar:
 +  right:
 +    
