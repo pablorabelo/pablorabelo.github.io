@@ -1,4 +1,4 @@
-theme:  jekyll-theme-lumen
+theme:  jekyll-theme-tactile
 navbar:
 +  right: 
 +    - icon: fa-github-alt fa-lg
