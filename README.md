@@ -1,5 +1,3 @@
-### Página inicial
-
 <a href="https://lcaunifal.github.io/portalhalley/">Portal Halley de Educação Atuarial</a>
 
 <a href="https://lcaunifal.wordpress.com/">Liga de Ciências Atuariais</a>
