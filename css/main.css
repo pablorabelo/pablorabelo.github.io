@@ -8,7 +8,7 @@ body {
   p {
     font-size: 16px;
     line-height: 150%;
-    text-align: ;
+    text-align: justify;
   }
   
   a {
@@ -40,10 +40,10 @@ body {
     color: black;
   }
   
-  /* .barra a.active {
+   .barra a.active {
     background-color: gray;
     color: white;
-  } */
+  } 
   
   #curriculo {
     font-size: 10px;
