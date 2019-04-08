@@ -44,8 +44,9 @@ _Uma **combinação** deles_
    
 ## Colocando imagem:
 
-![GitHub Logo](<Octocat.png>)
+![GitHub Logo](Octocat.png){width=35%}
 <!-- Format: ![Alt Text](url) -->
+<!--height=-->
 
 ## Links:
 
