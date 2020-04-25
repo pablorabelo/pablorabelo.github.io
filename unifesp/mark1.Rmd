@@ -44,13 +44,20 @@ _Uma **combinação** deles_
    
 ## Colocando imagem:
 
-![GitHub Logo](Octocat.png){width=35%}
+![LCA Logo](LCA_Azul.png){width=35%}
 <!-- Format: ![Alt Text](url) -->
 <!--height=-->
 
+## Colocando vídeos:
+
+<video width="320" height="240">
+<source src="LCAnovalogo.mp4" type="video/mp4">
+</video>
+
+
 ## Links:
 
-http://github.com - automatic!
+http://github.com - automatico!
 
 [GitHub](http://github.com)
 
