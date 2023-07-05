@@ -1,5 +1,0 @@
-theme:  jekyll-theme-tactile
-navbar:
-+  right: 
-+    - icon: fa-github-alt fa-lg
-+href: https://github.com/pablohrabelo
