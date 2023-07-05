@@ -1,0 +1,22 @@
+name: "Pablo Rabelo"
+output_dir: "docs"
+exclude: ["README.md", "\\.sh", "cache"]
+output:
+  html_document:
+    theme: flatly
+    highlight: default
+    number_sections: false
+    toc: true
+    toc_depth: 4
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    includes:
+      in_header: head.html
+      after_body: footer.html
+navbar:
+  title: Início
+  left:
+  right:
+    - icon: fa fa-calendar fa-lg
+      href: https://bit.ly/agenda-pablo-h3
