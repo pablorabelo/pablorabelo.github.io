@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo agora em Varginha/MG</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 4em;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        #header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #header img {
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://www.redeinovadrogarias.com.br/assets/images/brand_colored.svg" alt="Logo">
+    </div>
+    <h1>Tempo agora em Varginha/MG</h1>
+    <div id="weather-info">
+        <!-- Os dados do tempo atual serão exibidos aqui -->
+    </div>
+
+    <script>
+        // Insira aqui a sua chave de API da OpenWeatherMap
+        const apiKey = '80e2fb59453dbd5b48c4b5595caff790';
+
+        // URL da API da OpenWeatherMap para Varginha/MG (dados atuais)
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Varginha,MG,BR&appid=${apiKey}&lang=pt_br&units=metric`;
+
+        // Elemento HTML onde os dados do tempo atual serão exibidos
+        const weatherInfo = document.getElementById('weather-info');
+
+        // Função para buscar os dados do tempo atual
+        async function getWeatherData() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                // Exiba os dados do tempo atual
+                const temperature = data.main.temp;
+                const feelsLike = data.main.feels_like;
+                const description = data.weather[0].description;
+                const humidity = data.main.humidity;
+                const windSpeed = data.wind.speed;
+                const visibility = data.visibility;
+                const pressure = data.main.pressure;
+
+                weatherInfo.innerHTML = `
+                    <p><strong>Temperatura:</strong> ${temperature}°C</p>
+                    <p><strong>Sensação Térmica:</strong> ${feelsLike}°C</p>
+                    <p><strong>Descrição:</strong> ${description}</p>
+                    <p><strong>Umidade:</strong> ${humidity}%</p>
+                    <p><strong>Vento:</strong> ${windSpeed} m/s</p>
+                    <p><strong>Visibilidade:</strong> ${visibility} metros</p>
+                    <p><strong>Pressão Atmosférica:</strong> ${pressure} hPa</p>
+                `;
+            } catch (error) {
+                console.error('Erro ao buscar dados do tempo atual:', error);
+                weatherInfo.textContent = 'Não foi possível obter os dados do tempo atual.';
+            }
+        }
+
+        // Chame a função para buscar os dados do tempo atual
+        getWeatherData();
+    </script>
+</body>
+</html>
