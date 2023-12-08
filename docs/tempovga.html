@@ -17,7 +17,7 @@
             margin-bottom: 20px;
         }
         #header img {
-            width: 550px;
+            width: 350px;
             height: auto;
         }
         table {
@@ -34,7 +34,7 @@
             text-align: center;
         }
         #footer {
-            margin-top: 200px;
+            margin-top: 75px;
             font-weight: bold;
         }
     </style>
@@ -43,68 +43,14 @@
     <div id="header">
         <img src="https://www.redeinovadrogarias.com.br/assets/images/brand_colored.svg" alt="Logo">
     </div>
-    <h1>Previsão do Tempo em Varginha/MG</h1>
-    <div id="weather-info">
-        <!-- A tabela de previsão do tempo será exibida aqui -->
-    </div>
 
+    <div id="cont_5ec960020e41abe2bd016e69514fb9a0">
+        <script type="text/javascript" async src="https://www.tempo.com/wid_loader/5ec960020e41abe2bd016e69514fb9a0"></script>
+    </div>
+    
     <div id="footer">
-        Feito com carinho por <span>LCA & Branding Consultoria</span>
+        Feito com carinho por <span>BARBIC GAB</span>
     </div>
 
-    <script>
-        // Insira aqui a sua chave de API da OpenWeatherMap
-        const apiKey = '80e2fb59453dbd5b48c4b5595caff790';
-
-        // URL da API da OpenWeatherMap para Varginha/MG (previsão de 5 dias)
-        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Varginha,MG,BR&appid=${apiKey}&lang=pt_br&units=metric`;
-
-        // Elemento HTML onde a tabela de previsão do tempo será exibida
-        const weatherInfo = document.getElementById('weather-info');
-
-        // Função para buscar a previsão do tempo
-        async function getWeatherData() {
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-
-                // Exiba a tabela de previsão do tempo
-                const forecastList = data.list;
-
-                let tableHTML = '<table>';
-                tableHTML += '<tr><th>Data e Hora</th><th>Temp. Mínima (°C)</th><th>Temp. Máxima (°C)</th><th>Sensação Térmica (°C)</th><th>Condição Climática</th><th>Probabilidade de Chuva (%)</th><th>Quantidade de Chuva (mm)</th><th>Umidade (%)</th><th>Vento (m/s)</th><th>Visibilidade (m)</th><th>Cobertura de Nuvens (%)</th><th>Pressão (hPa)</th></tr>';
-
-                for (const forecast of forecastList) {
-                    const dateTime = new Date(forecast.dt * 1000); // Converter timestamp para data
-                    const formattedDate = `${dateTime.getDate()}/${dateTime.getMonth() + 1}/${dateTime.getFullYear()} ${dateTime.getHours()}:${String(dateTime.getMinutes()).padStart(2, '0')}`;
-                    const tempMin = forecast.main.temp_min;
-                    const tempMax = forecast.main.temp_max;
-                    const feelsLike = forecast.main.feels_like;
-                    const weatherDescription = forecast.weather[0].description;
-                    const pop = forecast.pop * 100; // Converter para porcentagem
-                    const rain = forecast.rain ? forecast.rain['3h'] : 0;
-                    const humidity = forecast.main.humidity;
-                    const windSpeed = forecast.wind.speed;
-                    const visibility = forecast.visibility;
-                    const clouds = forecast.clouds.all;
-                    const pressure = forecast.main.pressure;
-
-                    tableHTML += `<tr><td>${formattedDate}</td><td>${tempMin}</td><td>${tempMax}</td><td>${feelsLike}</td><td>${weatherDescription}</td><td>${pop}</td><td>${rain}</td><td>${humidity}</td><td>${windSpeed}</td><td>${visibility}</td><td>${clouds}</td><td>${pressure}</td></tr>`;
-                }
-
-                tableHTML += '</table>';
-                weatherInfo.innerHTML = tableHTML;
-            } catch (error) {
-                console.error('Erro ao buscar dados da previsão do tempo:', error);
-                weatherInfo.textContent = 'Não foi possível obter a previsão do tempo.';
-            }
-        }
-
-        // Chame a função para buscar a previsão do tempo imediatamente
-        getWeatherData();
-
-        // Defina a atualização automática a cada 3 horas (em milissegundos)
-        setInterval(getWeatherData, 3 * 60 * 60 * 1000); // 3 horas em milissegundos
-    </script>
 </body>
 </html>
