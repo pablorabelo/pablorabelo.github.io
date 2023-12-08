@@ -3,54 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Previsão do tempo atualizada para Varginha, Minas Gerais.">
     <title>Previsão do Tempo em Varginha/MG</title>
     <style>
         body {
             text-align: center;
-            font-size: 1em;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            margin-top: 20px;
+
+        header {
+            padding: 20px 0;
         }
-        #header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        #header img {
-            width: 350px;
+
+        .logo-container img {
+            max-width: 100%;
             height: auto;
         }
-        table {
-            margin: 0 auto;
-            font-size: 1.5em;
-            border-collapse: collapse;
-            width: 80%;
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
         }
-        table, th, td {
-            border: 1px solid black;
+
+        #cont_5ec960020e41abe2bd016e69514fb9a0 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        th, td {
-            padding: 10px;
+
+        iframe {
+            max-width: 100%;
+            height: 354px;
+            border: none;
+        }
+
+        footer {
             text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
         }
-        #footer {
-            margin-top: 75px;
-            font-weight: bold;
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <div id="header">
-        <img src="https://www.redeinovadrogarias.com.br/assets/images/brand_colored.svg" alt="Logo">
-    </div>
+    <header>
+        <div class="logo-container">
+            <img src="https://www.redeinovadrogarias.com.br/assets/images/brand_colored.svg" alt="Logo da Rede Inova Drogarias">
+        </div>
+    </header>
 
-    <div id="cont_5ec960020e41abe2bd016e69514fb9a0">
-        <script type="text/javascript" async src="https://www.tempo.com/wid_loader/5ec960020e41abe2bd016e69514fb9a0"></script>
-    </div>
+    <main>
+        <div id="cont_5ec960020e41abe2bd016e69514fb9a0">
+            <!-- O conteúdo do iframe será adicionado pelo JavaScript abaixo -->
+        </div>
+    </main>
     
-    <div id="footer">
-        Feito com carinho por <span>BARBIC GAB</span>
-    </div>
+    <footer>
+        <p>Feito com carinho por <span>BARBIC GAB</span></p>
+    </footer>
 
+    <script>
+        var conte = document.getElementById("cont_5ec960020e41abe2bd016e69514fb9a0");
+        if (conte) {
+            var elem = document.createElement("iframe");
+            elem.style.cssText = "width:999px; height:354px;";
+            elem.id = "5ec960020e41abe2bd016e69514fb9a0";
+            elem.src = "https://www.tempo.com/getwid/5ec960020e41abe2bd016e69514fb9a0";
+            elem.allowTransparency = true;
+            elem.scrolling = "no";
+            elem.name = "flipe";
+            conte.appendChild(elem);
+        }
+    </script>
 </body>
 </html>
